@@ -58,3 +58,14 @@ Mapa by měla mít podobně jako mapa Lidových novin možnost embedovat vybran�
 
 Mapa by měla být odladěná pro mobilní telefony (uvažujeme aktuální Android a iOS, prohlížeče Safari a Chrome). Jedná se hlavně o optimalizaci zobrazení a přiblížení mapy tak, aby při se při načtení přiblížila maximálně vzhledem k velikosti obrazovky.
 
+## Specifikace jazyka a vývojového prostředí
+
+V rámci ročníkového projektu vytvořím front end webové aplikace v jazyce JavaScript.
+
+Data, které bude mapa zobrazovat budu získávat na základě předpočítaných výsledků zveřejněných online jako vector tiles (nekomprimovaný *.pbf).
+
+#### Frameworky a závislosti
+
+Možnost vyhledat v mapě konkrétní okrsek bude implenetovaná s použítím geocoderu Mapy.cz.
+
+
