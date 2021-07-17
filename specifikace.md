@@ -8,7 +8,7 @@ Cílem práce je vytvořit webovou aplikaci, která bude interaktivně zobrazova
 
 https://www.irozhlas.cz/zpravy-domov/mapa-okrsky-volby-evropsky-parlament_1905270640_cib
 
-Jedná se o interaktivní mapu voleb do Evropského parlamentu v roce 2019. Mapa zobrazuje výsledky jednotlivých stran a volební účast
+Jedná se o interaktivní mapu voleb do Evropského parlamentu v roce 2018. Mapa zobrazuje výsledky jednotlivých stran a volební účast
 
 ##### Parametry:
 - podkladová mapa - je možné oddalovat a přibližovat, při prvním načtení se zobrazí oddálená na celou ČR
@@ -32,4 +32,29 @@ Tyto rozdíly nejsou pro můj projekt relevantní, protože budu zpracovávat vo
 
 Důležitý rozdíl této mapy je možnost embedovat vybrané souřadnice s vlastním zoomem.
 
+## Analýza požadavků
+
+Mapu vytvářím pro Český rozhlas. Cílem je vytvořit samostatný modul interaktivní volební mapy, který bude možné nezávislé vkládat do různých článků, týkajících se voleb. 
+
+#### Vizuální stránka
+
+Vizuálně by měla být mapa podobná mapě Českého rozhlasu pro volby do Evropského parlamentu. Tedy na mapě jsou vrstvy které odpovídají výsledkům jednotnlivých stran a účasti. Každá strana má přidělenou barvu, jednotlivé volební okrsky jsou zbarvené odstínem této barvy, odpovídajícím procentuálnímu výsledku. Při tom je nutné kompenzovat rozdíly ve výsledcích stran (pro strany s vyššími zisky je nutné nastavit jinou škálu barev než pro strany s nižšími zisky).
+
+#### Opakované použití
+
+Očekává se, že mapu bude možné opakovaně používat, jak v rámci voleb 2021, tak případně pro další volby. Nebude se tedy jednat o samostatnou webovou aplikaci, ale spíše o modul, který je možné embedovat do jiných aplikací.
+
+Implementace by proto měla být optimalizovaná pro časté změny mapového stylu a měla by mít možnost importu stylu.
+
+#### Šablona iROZHLAS.cz
+
+Model s volební mapou je potřeba implementovat tak, aby ho bylo možné používat spolu se snowball šablonou, kterou iROZHLAS.cz používá ke generování interaktivních článků. Projekt tedy musí mít určitou strukturu dannou šablonou.
+
+#### Embedování souřadnic
+
+Mapa by měla mít podobně jako mapa Lidových novin možnost embedovat vybrané souřadnice s vlastním zoomem. To znamená možnost zadefinovat předem souřadnice, na které se mapa při prvním načtení automaticky přiblíží. Toto je možné využít například v článku s volebními výsledky konkrétního regionu - použije se stejná interaktivní mapa jako pro celou ČR, ale zazoomovaná na daný region.
+
+#### Mobilní telefony
+
+Mapa by měla být odladěná pro mobilní telefony (uvažujeme aktuální Android a iOS, prohlížeče Safari a Chrome). Jedná se hlavně o optimalizaci zobrazení a přiblížení mapy tak, aby při se při načtení přiblížila maximálně vzhledem k velikosti obrazovky.
 
