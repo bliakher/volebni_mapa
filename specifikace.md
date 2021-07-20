@@ -66,6 +66,8 @@ Data, které bude mapa zobrazovat budu získávat na základě předpočítanýc
 
 #### Frameworky a závislosti
 
+Pro zpracování mapy použiju knihovnu Mapbox GL. Ta umožňuje práci s podkladovou mapou, vytváření vrstev na mapě a interaktivnost mapy s uživatelem.
+
 Možnost vyhledat v mapě konkrétní okrsek bude implenetovaná s použítím geocoderu Mapy.cz.
 
 
