@@ -54,6 +54,20 @@ Model s volební mapou je potřeba implementovat tak, aby ho bylo možné použ�
 
 Mapa by měla mít podobně jako mapa Lidových novin možnost embedovat vybrané souřadnice s vlastním zoomem. To znamená možnost zadefinovat předem souřadnice, na které se mapa při prvním načtení automaticky přiblíží. Toto je možné využít například v článku s volebními výsledky konkrétního regionu - použije se stejná interaktivní mapa jako pro celou ČR, ale zazoomovaná na daný region.
 
+## Specifikace funkcionalit z pohledu uživatele
+
+### Práce s mapou
+Zobrazený úsek v mapě je možné posouvat potáhnutím myši na mapě. Mapu je možné přiblížit a oddálit pomocí tlačítek určených pro zoomování. 
+Při načtení stránky je mapa vycentrovaná na souřadnice embedované v dané mapě (nebo na výchozí souřadnice - přibližný střed ČR - pokud souřadnice nejsou specifikované) a je přiblížená na výchozí zoom.
+
+### Vybrání vrstvy 
+Mapa vždy zobrazuje jednu vrstvu s daty - volební účast nebo volební výsledky konkrétní strany. Zobrazovanou vrstu je možné zvolit z rozklikávací nabídky, ve které jsou strany seřazené podle přiřazeného čísla volebního lístku.  Vrstvu, která se zobrazí při načtení je možné embedovat do mapy. Ve výchozím zobrazení je zvolená vrstva s účastí.
+
+### Vyhledání obce
+V mapě je možné vyhledávat zadáním jména obce do textového pole a zmáčknutím tlačítka `Hledat`. Nalezená obec se vycentruje do středu mapy a mapa se přiblíží.
+
+### Informace o výsledcích v okrsku
+Při najetí myší na konkrétní okrsek se zobrazují informace o daném okrsku. Konkrétně číslo oksku, název obce, ve které se nachází a volební výsledek podle vybrané strany (nebo účast) v procentech a také konkrétní počet hlasů.
 
 ## Specifikace jazyka a vývojového prostředí
 
