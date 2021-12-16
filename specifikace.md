@@ -54,9 +54,6 @@ Model s volební mapou je potřeba implementovat tak, aby ho bylo možné použ�
 
 Mapa by měla mít podobně jako mapa Lidových novin možnost embedovat vybrané souřadnice s vlastním zoomem. To znamená možnost zadefinovat předem souřadnice, na které se mapa při prvním načtení automaticky přiblíží. Toto je možné využít například v článku s volebními výsledky konkrétního regionu - použije se stejná interaktivní mapa jako pro celou ČR, ale zazoomovaná na daný region.
 
-#### Mobilní telefony
-
-Mapa by měla být odladěná pro mobilní telefony (uvažujeme aktuální Android a iOS, prohlížeče Safari a Chrome). Jedná se hlavně o optimalizaci zobrazení a přiblížení mapy tak, aby při se při načtení přiblížila maximálně vzhledem k velikosti obrazovky.
 
 ## Specifikace jazyka a vývojového prostředí
 
@@ -66,7 +63,7 @@ Data, které bude mapa zobrazovat budu získávat na základě předpočítanýc
 
 #### Frameworky a závislosti
 
-Pro zpracování mapy použiju knihovnu Mapbox GL. Ta umožňuje práci s podkladovou mapou, vytváření vrstev na mapě a interaktivnost mapy s uživatelem.
+Pro zpracování mapy použiji knihovnu Mapbox GL. Ta umožňuje práci s podkladovou mapou, vytváření vrstev na mapě a interaktivnost mapy s uživatelem.
 
 Možnost vyhledat v mapě konkrétní okrsek bude implenetovaná s použítím geocoderu Mapy.cz.
 
