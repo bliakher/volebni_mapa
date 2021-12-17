@@ -2,7 +2,8 @@
 
 ## Architektura
 
-Projekt je rozdělený na dva moduly. První modul obsahuje samotnou mapu a všechny její funkcionality a dále třídu, která umožňuje embedovaní mapy do předpřipravené struktury v HTML. Druhý je samostatný modul, který obsahuje specifikovaný styl, který mapa využívá.
+Projekt je rozdělený na dva moduly. První modul obsahuje samotnou. 
+Druhý je samostatný modul, který obsahuje specifikovaný styl, který mapa využívá.
 
 ### Modul s mapou
 
@@ -11,12 +12,12 @@ Modul je rozdělený do několika tříd.
 Třída `Map` reprezentuje samotnou mapu a obsahuje všechny její funkcionality.
 Využívá několika pomocných tříd (`MapLegend`, `PartySelector` a `GeocodeFinder`), které reprezentují komponety mapy -
 popisek, výběr vrstvy v mapě a vyhledávač.
-Při vytvoření mapy se postupně instancují její komponenty. 
+Při vytvoření mapy se postupně instanciují její komponenty. 
 V komponentách se vytvoří události, které jsou navázané na mapu, tedy při interakci s mapou se vyvolá událost v potřebné komponentě.
 
 Poslední třídou v modulu je `MapEmbeder`. 
 Tato třída slouží embedování mapy do HTML dokumentu.
-Třída najde v dokumentu všechny elementy, které jsou označené pro embedování mapy (pomocí třídy), 
+Třída najde v dokumentu všechny elementy, které jsou označené pro embedování mapy (pomocí CSS třídy), 
 a pro každý element vytvoří odpovídající instanci třídy `Map`.
 Tuto třídu nainicializuje výchozími parametry, které získá z daného elementu.
 Takovými parametry jsou například souřadnice, na které bude mapa vycentrovaná nebo výchozí zobrazená vrstva.
