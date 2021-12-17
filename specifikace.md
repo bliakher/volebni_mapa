@@ -73,12 +73,19 @@ Při najetí myší na konkrétní okrsek se zobrazují informace o daném okrsk
 
 V rámci ročníkového projektu vytvořím front end webové aplikace v jazyce JavaScript.
 
-Data, které bude mapa zobrazovat budu získávat na základě předpočítaných výsledků zveřejněných online jako vector tiles (nekomprimovaný *.pbf).
-
 #### Frameworky a závislosti
 
 Pro zpracování mapy použiji knihovnu Mapbox GL. Ta umožňuje práci s podkladovou mapou, vytváření vrstev na mapě a interaktivnost mapy s uživatelem.
 
 Možnost vyhledat v mapě konkrétní okrsek bude implenetovaná s použítím geocoderu Mapy.cz.
 
+#### Data
 
+Volební výsledky, které bude mapa zobrazovat budu získávat na základě předpočítaných výsledků zveřejněných online na webu iRozhlasu jako vector tiles (nekomprimovaný *.pbf).
+Tyto tily se předají objektu mapboxgl, který už je dále umí zobrazit na základě nadefinovaného stylu.
+
+Dále projekt využívá číselník stran, který obsahuje jméno strany, zkratku jména a přidělené číslo hlasovacího lístku. 
+Využívá se pro zobrazení popisků k mapě.
+
+Pro každou stranu jsou také, na základě jejího výsledku, předpočítané procentuální hranice pro odstupňování barevného odstínu,
+kterým je výsledek zobrazený na mapě.
