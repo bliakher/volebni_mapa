@@ -52,7 +52,7 @@ Model s volební mapou je potřeba implementovat tak, aby ho bylo možné použ�
 
 #### Embedování souřadnic
 
-Mapa by měla mít podobně jako mapa Lidových novin možnost embedovat vybrané souřadnice s vlastním zoomem. To znamená možnost zadefinovat předem souřadnice, na které se mapa při prvním načtení automaticky přiblíží. Toto je možné využít například v článku s volebními výsledky konkrétního regionu - použije se stejná interaktivní mapa jako pro celou ČR, ale zazoomovaná na daný region.
+Mapa by měla mít podobně jako mapa Lidových novin možnost embedovat vybrané souřadnice s vlastním zoomem. To znamená možnost zadefinovat předem souřadnice, na které se mapa při prvním načtení automaticky přiblíží. Toto je možné využít například v článku s volebními výsledky konkrétního regionu - použije se stejná interaktivní mapa jako pro celou ČR, ale přiblížená na daný region.
 
 ## Specifikace funkcionalit z pohledu uživatele
 
@@ -82,6 +82,7 @@ Možnost vyhledat v mapě konkrétní okrsek bude implenetovaná s použítím g
 #### Data
 
 Volební výsledky, které bude mapa zobrazovat budu získávat na základě předpočítaných výsledků zveřejněných online na webu iRozhlasu jako vector tiles (nekomprimovaný *.pbf).
+Tile obsahuje data z jednoho okrsku, tedy výsledky všech stran v okrsku a účast.
 Tyto tily se předají objektu mapboxgl, který už je dále umí zobrazit na základě nadefinovaného stylu.
 
 Dále projekt využívá číselník stran, který obsahuje jméno strany, zkratku jména a přidělené číslo hlasovacího lístku. 
